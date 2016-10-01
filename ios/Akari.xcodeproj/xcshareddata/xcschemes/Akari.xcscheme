@@ -15,9 +15,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "13B07F861A680F5B00A75B9A"
-               BuildableName = "Test1.app"
-               BlueprintName = "Test1"
-               ReferencedContainer = "container:Test1.xcodeproj">
+               BuildableName = "Akari.app"
+               BlueprintName = "Akari"
+               ReferencedContainer = "container:Akari.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
          <BuildActionEntry
@@ -29,9 +29,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "00E356ED1AD99517003FC87E"
-               BuildableName = "Test1Tests.xctest"
-               BlueprintName = "Test1Tests"
-               ReferencedContainer = "container:Test1.xcodeproj">
+               BuildableName = "AkariTests.xctest"
+               BlueprintName = "AkariTests"
+               ReferencedContainer = "container:Akari.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -47,9 +47,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "00E356ED1AD99517003FC87E"
-               BuildableName = "Test1Tests.xctest"
-               BlueprintName = "Test1Tests"
-               ReferencedContainer = "container:Test1.xcodeproj">
+               BuildableName = "AkariTests.xctest"
+               BlueprintName = "AkariTests"
+               ReferencedContainer = "container:Akari.xcodeproj">
             </BuildableReference>
          </TestableReference>
       </Testables>
@@ -57,9 +57,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "13B07F861A680F5B00A75B9A"
-            BuildableName = "Test1.app"
-            BlueprintName = "Test1"
-            ReferencedContainer = "container:Test1.xcodeproj">
+            BuildableName = "Akari.app"
+            BlueprintName = "Akari"
+            ReferencedContainer = "container:Akari.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
    </TestAction>
@@ -77,9 +77,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "13B07F861A680F5B00A75B9A"
-            BuildableName = "Test1.app"
-            BlueprintName = "Test1"
-            ReferencedContainer = "container:Test1.xcodeproj">
+            BuildableName = "Akari.app"
+            BlueprintName = "Akari"
+            ReferencedContainer = "container:Akari.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
       <AdditionalOptions>
@@ -96,9 +96,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "13B07F861A680F5B00A75B9A"
-            BuildableName = "Test1.app"
-            BlueprintName = "Test1"
-            ReferencedContainer = "container:Test1.xcodeproj">
+            BuildableName = "Akari.app"
+            BlueprintName = "Akari"
+            ReferencedContainer = "container:Akari.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>

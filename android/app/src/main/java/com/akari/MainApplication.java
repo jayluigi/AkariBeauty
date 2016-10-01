@@ -1,4 +1,4 @@
-package com.test1;
+package com.akari;
 
 import android.app.Application;
 import android.util.Log;
