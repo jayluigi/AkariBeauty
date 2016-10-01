@@ -1,0 +1,307 @@
+
+
+Loading...
+Search for services, methods, and recent requests...
+
+
+APIs Explorer
+
+
+
+Services
+
+All Versions
+
+Request History
+Learn more about using the YouTube Data API by reading the documentation.
+Services > YouTube Data API v3 > youtube.playlistItems.list
+Authorize requests using OAuth 2.0:
+
+
+part	
+
+snippet
+The part parameter specifies a comma-separated list of one or more playlistItem resource properties that the API response will include. If the parameter identifies a property that contains child properties, the child properties will be included in the response. For example, in a playlistItem resource, the snippet property contains numerous fields, including the title, description, position, and resourceId properties. As such, if you set part=snippet, the API response will contain all of those properties. (string)
+id	
+
+The id parameter specifies a comma-separated list of one or more unique playlist item IDs. (string)
+maxResults	
+
+The maxResults parameter specifies the maximum number of items that should be returned in the result set. (integer, 0-50)
+onBehalfOfContentOwner	
+
+Note: This parameter is intended exclusively for YouTube content partners. The onBehalfOfContentOwner parameter indicates that the request's authorization credentials identify a YouTube CMS user who is acting on behalf of the content owner specified in the parameter value. This parameter is intended for YouTube content partners that own and manage many different YouTube channels. It allows content owners to authenticate once and get access to all their video and channel data, without having to provide authentication credentials for each individual channel. The CMS account that the user authenticates with must be linked to the specified YouTube content owner. (string)
+pageToken	
+
+The pageToken parameter identifies a specific page in the result set that should be returned. In an API response, the nextPageToken and prevPageToken properties identify other pages that could be retrieved. (string)
+playlistId	
+
+UUG1_Id_-GvT04QyEAqS7LFA
+The playlistId parameter specifies the unique ID of the playlist for which you want to retrieve playlist items. Note that even though this is an optional parameter, every request to retrieve playlist items must specify a value for either the id parameter or the playlistId parameter. (string)
+videoId	
+
+The videoId parameter specifies that the request should return only the playlist items that contain the specified video. (string)
+fields	
+
+Selector specifying which fields to include in a partial response.
+Use fields editor
+bold red = required
+Authorize and execute		
+Execute without OAuth
+youtube.playlistItems.list executed one minute ago time to execute: 186 ms
+Request
+
+ 
+GET https://www.googleapis.com/youtube/v3/playlistItems?part=snippet&playlistId=UUG1_Id_-GvT04QyEAqS7LFA&key={YOUR_API_KEY}
+ 
+ 
+Response
+
+ 
+200
+ 
+- Show headers -
+  
+{
+ "kind": "youtube#playlistItemListResponse",
+ "etag": "\"I_8xdZu766_FSaexEaDXTIfEWc0/SSfUxSPyo1wYYatGPqLdSLKJv8A\"",
+ "nextPageToken": "CAUQAA",
+ "pageInfo": {
+  "totalResults": 16,
+  "resultsPerPage": 5
+ },
+ "items": [
+  {
+
+
+   "kind": "youtube#playlistItem",
+   "etag": "\"I_8xdZu766_FSaexEaDXTIfEWc0/mZb99Swzvq73S4OZNlVoRgKevu8\"",
+   "id": "VVVHMV9JZF8tR3ZUMDRReUVBcVM3TEZBLllnZUU3SnJJYWd3",
+   "snippet": {
+    "publishedAt": "2016-02-12T18:20:40.000Z",
+    "channelId": "UCG1_Id_-GvT04QyEAqS7LFA",
+    "title": "Get Ready With Me For Valentine's Day 2016 | Akari",
+    "description": "Hello, Everyone! \nThis is my Valentine's Day soft makeup tutorial and hope you enjoy it! \nI know I made some mistakes in the video, but I am doing my best and hope I get better ! \nPractice makes perfect, right? ^_^ \n\nPlease be friends with me\nFacebook : Akari Soe Mon Blog\nInstagram : AkariSoeMon\nTwitter : @AkariSoeMon",
+    "thumbnails": {
+     "default": {
+      "url": "https://i.ytimg.com/vi/YgeE7JrIagw/default.jpg",
+      "width": 120,
+      "height": 90
+     },
+     "medium": {
+      "url": "https://i.ytimg.com/vi/YgeE7JrIagw/mqdefault.jpg",
+      "width": 320,
+      "height": 180
+     },
+     "high": {
+      "url": "https://i.ytimg.com/vi/YgeE7JrIagw/hqdefault.jpg",
+      "width": 480,
+      "height": 360
+     },
+     "standard": {
+      "url": "https://i.ytimg.com/vi/YgeE7JrIagw/sddefault.jpg",
+      "width": 640,
+      "height": 480
+     },
+     "maxres": {
+      "url": "https://i.ytimg.com/vi/YgeE7JrIagw/maxresdefault.jpg",
+      "width": 1280,
+      "height": 720
+     }
+    },
+    "channelTitle": "Akari Soe Mon",
+    "playlistId": "UUG1_Id_-GvT04QyEAqS7LFA",
+    "position": 0,
+    "resourceId": {
+     "kind": "youtube#video",
+     "videoId": "YgeE7JrIagw"
+    }
+   }
+  },
+  {
+
+
+   "kind": "youtube#playlistItem",
+   "etag": "\"I_8xdZu766_FSaexEaDXTIfEWc0/3f6-4VQac1lD-mXhUjobm_btqQU\"",
+   "id": "VVVHMV9JZF8tR3ZUMDRReUVBcVM3TEZBLnlTMm1JRU1IVlZZ",
+   "snippet": {
+    "publishedAt": "2016-01-08T11:23:00.000Z",
+    "channelId": "UCG1_Id_-GvT04QyEAqS7LFA",
+    "title": "Star Wars Makeup: Light's Side Mystic Look by Akari",
+    "description": "Hello!\n\nThis is my Star Wars Makeup Inspired by Cover Girl Makeup Artist Path McGrath. \n\nProducts used in this video:\nRevlon colour stay #No330 Natural Tan\nL'Oreal Eyebrow pencil #Dark Brown\ne.l.f 100 eyeshadow palette \nEylure London Eyelashes #N 118\nRevlon Color Matte Balm #225 Enchanting\n\n\nBackground Music: \nStar Wars Imperial March Drum Cover by The Drum Covers\nMore about other Drum cover songs, please subscribe to the YouTube Channel \"The Drum Covers\":\nhttps://www.youtube.com/channel/UC4pkagchu9uyep-g511tTdQ",
+    "thumbnails": {
+     "default": {
+      "url": "https://i.ytimg.com/vi/yS2mIEMHVVY/default.jpg",
+      "width": 120,
+      "height": 90
+     },
+     "medium": {
+      "url": "https://i.ytimg.com/vi/yS2mIEMHVVY/mqdefault.jpg",
+      "width": 320,
+      "height": 180
+     },
+     "high": {
+      "url": "https://i.ytimg.com/vi/yS2mIEMHVVY/hqdefault.jpg",
+      "width": 480,
+      "height": 360
+     },
+     "standard": {
+      "url": "https://i.ytimg.com/vi/yS2mIEMHVVY/sddefault.jpg",
+      "width": 640,
+      "height": 480
+     },
+     "maxres": {
+      "url": "https://i.ytimg.com/vi/yS2mIEMHVVY/maxresdefault.jpg",
+      "width": 1280,
+      "height": 720
+     }
+    },
+    "channelTitle": "Akari Soe Mon",
+    "playlistId": "UUG1_Id_-GvT04QyEAqS7LFA",
+    "position": 1,
+    "resourceId": {
+     "kind": "youtube#video",
+     "videoId": "yS2mIEMHVVY"
+    }
+   }
+  },
+  {
+
+
+   "kind": "youtube#playlistItem",
+   "etag": "\"I_8xdZu766_FSaexEaDXTIfEWc0/BlquzsMOIDz5lgU6Hleh5r2bcLU\"",
+   "id": "VVVHMV9JZF8tR3ZUMDRReUVBcVM3TEZBLjNKY1hnd1M0bGNj",
+   "snippet": {
+    "publishedAt": "2015-11-24T17:04:07.000Z",
+    "channelId": "UCG1_Id_-GvT04QyEAqS7LFA",
+    "title": "Akari | Fresh 5 Minutes Makeup",
+    "description": "A quick & easy natural fresh glowing makeup in 5 minutes tutorial without wasting much time. I also included some tips on getting your quick makeup. \nPerfect for work + school! \n\nP R O D U C T S U S E D |\n———————————————\nF O L L O W M E ?\n\n? F A C E B O O K | http://on.fb.me/1OqgRVi\n? I N S T A G R A M | http://bit.ly/1N65vT1\n? T W I T T E R | http://bit.ly/1N65Dlc\n? B L O G | http://akaribeautydiary.blogspot.co.uk",
+    "thumbnails": {
+     "default": {
+      "url": "https://i.ytimg.com/vi/3JcXgwS4lcc/default.jpg",
+      "width": 120,
+      "height": 90
+     },
+     "medium": {
+      "url": "https://i.ytimg.com/vi/3JcXgwS4lcc/mqdefault.jpg",
+      "width": 320,
+      "height": 180
+     },
+     "high": {
+      "url": "https://i.ytimg.com/vi/3JcXgwS4lcc/hqdefault.jpg",
+      "width": 480,
+      "height": 360
+     },
+     "standard": {
+      "url": "https://i.ytimg.com/vi/3JcXgwS4lcc/sddefault.jpg",
+      "width": 640,
+      "height": 480
+     },
+     "maxres": {
+      "url": "https://i.ytimg.com/vi/3JcXgwS4lcc/maxresdefault.jpg",
+      "width": 1280,
+      "height": 720
+     }
+    },
+    "channelTitle": "Akari Soe Mon",
+    "playlistId": "UUG1_Id_-GvT04QyEAqS7LFA",
+    "position": 2,
+    "resourceId": {
+     "kind": "youtube#video",
+     "videoId": "3JcXgwS4lcc"
+    }
+   }
+  },
+  {
+
+
+   "kind": "youtube#playlistItem",
+   "etag": "\"I_8xdZu766_FSaexEaDXTIfEWc0/JQNzBI7CIuCAJ9JuTG7AgAD7QN8\"",
+   "id": "VVVHMV9JZF8tR3ZUMDRReUVBcVM3TEZBLlgyaTVOZnkxT2NV",
+   "snippet": {
+    "publishedAt": "2015-11-06T13:43:23.000Z",
+    "channelId": "UCG1_Id_-GvT04QyEAqS7LFA",
+    "title": "October Favourites | Akari",
+    "description": "? My October Favourites ?\nHope you enjoy my little video about some of my favourite things this month  October :)\n\n\n\nProducts Mentioned and The Website Links:\n\nMaybelline Lash Sensational Multiplying Mascara\nSuperdrug Website: http://www.superdrug.com\n\nMaybelline Fit Me Foundation - Shade 220 (Medium Skin Tone)\nSuperdrug Website: http://www.superdrug.com\n\nRevlon ColorBurst Balm Stain – 040 Rendevous\nSuperdrug Website: http://www.superdrug.com\n\nStila Stay All Day Waterproof Eyeliner – Dark Brown\nMark & Spencer Website: http://goo.gl/7hRxtF\n\nBourjois Healthy Mix Serum – 53 Light Beige (Beige Clair)\nSuperdrug Website: http://www.superdrug.com\n\nReal Techniques Core Collection\nAmazon Website: http://goo.gl/sf1Rr5\n\nLaneige Anti-Aging BB Cream Cushion – 21 Natural Beige\nEbay Seller: http://goo.gl/jN4gue\n\nBodyshop Banana Shampoo\nBodyshop: http://goo.gl/2S97Tb\n\nBodyshop Banana Conditioner \nBodyshop: http://goo.gl/S5rmU8\n\nBodyshop Ginger Shampoo \nBodyShop: http://goo.gl/Qrjj9m\n\nC 20 Original Pure Vitamin Serum (I use it as Night Serum)\nEbay Seller: http://goo.gl/eHsuSi\n\nVichy Aqualia Thermal Serum (I use it as Day Serum)\nFeel Unique Website: http://goo.gl/okj9yi\n\n\n\nFIND ME:\n\nYouTube CHANNEL: https://goo.gl/qpv4MP\nBLOG : http://akaribeautydiary.blogspot.co.uk\nFACEBOOK : https://www.facebook.com/Akari-Soe-Mon-751809488220178/?ref=hl\nTWITTER: https://twitter.com/AkariSoeMon\nINSTAGRAM : https://instagram.com/akarisoemon/\n\nThank you for watching my video and Please subscribe to my Channel! \nLove you!!!\nAkari\n\nxxxxxx",
+    "thumbnails": {
+     "default": {
+      "url": "https://i.ytimg.com/vi/X2i5Nfy1OcU/default.jpg",
+      "width": 120,
+      "height": 90
+     },
+     "medium": {
+      "url": "https://i.ytimg.com/vi/X2i5Nfy1OcU/mqdefault.jpg",
+      "width": 320,
+      "height": 180
+     },
+     "high": {
+      "url": "https://i.ytimg.com/vi/X2i5Nfy1OcU/hqdefault.jpg",
+      "width": 480,
+      "height": 360
+     }
+    },
+    "channelTitle": "Akari Soe Mon",
+    "playlistId": "UUG1_Id_-GvT04QyEAqS7LFA",
+    "position": 3,
+    "resourceId": {
+     "kind": "youtube#video",
+     "videoId": "X2i5Nfy1OcU"
+    }
+   }
+  },
+  {
+
+
+   "kind": "youtube#playlistItem",
+   "etag": "\"I_8xdZu766_FSaexEaDXTIfEWc0/oJc3vVISx1xj3iv9_qi94bw2oY0\"",
+   "id": "VVVHMV9JZF8tR3ZUMDRReUVBcVM3TEZBLjUxUU1Fd3RDcUZ3",
+   "snippet": {
+    "publishedAt": "2015-10-29T13:26:30.000Z",
+    "channelId": "UCG1_Id_-GvT04QyEAqS7LFA",
+    "title": "Spring Natural Dewy & Glowing Makeup | Akari",
+    "description": "",
+    "thumbnails": {
+     "default": {
+      "url": "https://i.ytimg.com/vi/51QMEwtCqFw/default.jpg",
+      "width": 120,
+      "height": 90
+     },
+     "medium": {
+      "url": "https://i.ytimg.com/vi/51QMEwtCqFw/mqdefault.jpg",
+      "width": 320,
+      "height": 180
+     },
+     "high": {
+      "url": "https://i.ytimg.com/vi/51QMEwtCqFw/hqdefault.jpg",
+      "width": 480,
+      "height": 360
+     },
+     "standard": {
+      "url": "https://i.ytimg.com/vi/51QMEwtCqFw/sddefault.jpg",
+      "width": 640,
+      "height": 480
+     },
+     "maxres": {
+      "url": "https://i.ytimg.com/vi/51QMEwtCqFw/maxresdefault.jpg",
+      "width": 1280,
+      "height": 720
+     }
+    },
+    "channelTitle": "Akari Soe Mon",
+    "playlistId": "UUG1_Id_-GvT04QyEAqS7LFA",
+    "position": 4,
+    "resourceId": {
+     "kind": "youtube#video",
+     "videoId": "51QMEwtCqFw"
+    }
+   }
+  }
+ ]
+}
+ 
+Custom API key and OAuth 2.0 client ID:
+You can create credentials, enable/disable APIs, and manage quota in the Google Developers Console.
+APIs Explorer credentialsCustom credentials
+API Key: 	
+OAuth 2.0 Client ID: 	
+SaveCancel

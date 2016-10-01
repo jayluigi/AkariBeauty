@@ -16,56 +16,54 @@ import {
 class Thumbnail extends Component {
   render() {
       let pic = {
-      uri: 'https://upload.wikimedia.org/wikipedia/commons/d/de/Bananavarieties.jpg'
+      uri: 'https://i.ytimg.com/vi/yS2mIEMHVVY/default.jpg'
     };
     return (
-      <Image source={pic} style={{width: 80, height: 60}}/>
+      <Image source={pic} style={{width: 120, height: 90}}/>
     );
   }
 }
 
-// class VideoTitle extends Component {
-//   render() {
-//     return (
-//       <Text>Title: {this.props.title}!</Text>
-//     );
-//   }
-// }
+class VideoTitle extends Component {
+  render() {
+    return (
+      <Text style={styles.title}>Title: {this.props.title}!</Text>
+    );
+  }
+}
 
-// class Playlist extends Component{
-//   render() {
-//     return (
-//       <View style = {styles.container}>
-//         <Thumbnail /> <VideoTitle style = {styles.instructions} title="Title01" />
-//         <Thumbnail /> <VideoTitle style = {styles.instructions} title="Title02" />
-//         <Thumbnail /> <VideoTitle style = {styles.instructions} title="Title03" />
-//         <Thumbnail /> <VideoTitle style = {styles.instructions} title="Title04" />
-//         <Thumbnail /> <VideoTitle style = {styles.instructions} title="Title05" />
-//         <Thumbnail /> <VideoTitle style = {styles.instructions} title="Title06" />
-//         <Thumbnail /> <VideoTitle style = {styles.instructions} title="Title07" />
-//         <Thumbnail /> <VideoTitle style = {styles.instructions} title="Title08" />
-//       </View>
-//     );
-//   }
-// }
+class Video extends Component {
+  render() {
+    return (
+      <View style={styles.video}>
+        <Thumbnail />
+        <VideoTitle title="Star Wars makeup" />
+      </View>
+    )
+  }
+}
 
-// const styles = StyleSheet.create({
-//   container: {
-//     flex: 1,
-//     justifyContent: 'center',
-//     alignItems: 'center',
-//     backgroundColor: '#fcd6ff',
-//   },
-//   welcome: {
-//     fontSize: 20,
-//     textAlign: 'center',
-//     margin: 10,
-//   },
-//   instructions: {
-//     textAlign: 'center',
-//     color: '#000000',
-//     marginBottom: 5,
-//   },
-// });
+class Playlist extends Component{
+  render() {
+    return (
+      <View>
+        <Video />
+        <Video />
+        <Video />
+        <Video />
+        <Video />               
+      </View>
+    );
+  }
+}
 
-AppRegistry.registerComponent('Thumbnail', () => Thumbnail); // launcher component
+const styles = StyleSheet.create({
+  video: {
+    margin: 10,
+    alignItems: 'center',
+  },
+  title: {
+  }
+});
+
+AppRegistry.registerComponent('Akari', () => Playlist); // launcher component
