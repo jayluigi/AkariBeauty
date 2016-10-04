@@ -16,53 +16,27 @@ import {
 
 
 /********************************************************************************
- * Youtube Channel Playlist App
+ * Lots of styles App
  *******************************************************************************/
-class Thumbnail extends Component {
-  render() {
-      let pic = {
-      uri: 'https://i.ytimg.com/vi/yS2mIEMHVVY/default.jpg'
-    };
-    return (
-      <Image source={pic} style={{width: 120, height: 90}}/>
-    );
-  }
-}
 
-class VideoTitle extends Component {
-  render() {
-    return (
-      <Text style={styles.title}>Title: {this.props.title}!</Text>
-    );
-  }
-}
-
-class Video extends Component {
-  render() {
-    return (
-      <View style={styles.video}>
-        <Thumbnail />
-        <VideoTitle title="Star Wars makeup" />
-      </View>
-    )
-  }
-}
-
-class Playlist extends Component{
-  render() {
-    return (
+class LotsOfStyles extends Component
+{
+  render()
+  {
+    return(
       <View>
-        <Video />
-        <Video />
-        <Video />          
+        <Text style = {styles.red}>just red</Text>
+        <Text style = {styles.bigblue}>big fat blue</Text>
+        <Text style = {[styles.bigblue, styles.red]}>big and fat and blue, but RED</Text>
+        <Text style = {[styles.red, styles.bigblue]}>red, then big blue applied</Text>
       </View>
     );
   }
 }
+
 /********************************************************************************
  * End of App
  *******************************************************************************/
-
 
 
 const styles = StyleSheet.create({
@@ -87,4 +61,4 @@ const styles = StyleSheet.create({
   },
 });
 
-AppRegistry.registerComponent('Akari', () => Playlist); // launcher component
+AppRegistry.registerComponent('Akari', () => LotsOfStyles); // launcher component
