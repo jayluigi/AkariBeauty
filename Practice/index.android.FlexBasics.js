@@ -7,27 +7,28 @@
 import React, { Component } from 'react';
 import {
   AppRegistry,
-  StyleSheet,
-  Text,
   View,
-  Image
+  StyleSheet,
 } from 'react-native';
 
 
 
 /********************************************************************************
- * Youtube Channel Playlist App
+ * Flex Basics App
  *******************************************************************************/
 
-class className extends Component {
+class FlexDimensionsBasics extends Component
+{
   render()
   {
-    return (
-        <View>
-            
-        </View>
-    );
-  };
+    return(
+      <View style = { { flex: 1 } }>
+        <View style = { { flex: 1, backgroundColor: 'powderblue' } } />
+        <View style={{ flex: 2, backgroundColor: 'skyblue' }} />
+        <View style={{ flex: 3, backgroundColor: 'steelblue' }} />
+      </View>
+    )
+  }
 }
 
 /********************************************************************************
@@ -42,4 +43,4 @@ const styles = StyleSheet.create({
   },
 });
 
-AppRegistry.registerComponent('Akari', () => LaunchComponent); // launcher component
+AppRegistry.registerComponent('Akari', () => FlexDimensionsBasics); // launcher component
