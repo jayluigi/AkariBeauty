@@ -5,54 +5,53 @@
  */
 
 import React, { Component } from 'react';
-import {
-  AppRegistry,
-  Text,
-  ListView,
-  Image,
-  View
-} from 'react-native';
+import { AppRegistry, Navigator, Text, View } from 'react-native';
 
-
+import MyScene from "./MyScene";
 
 /********************************************************************************
- * ListView basics App
+ * Navigation basics App
  *******************************************************************************/
 
-class ListViewBasics extends Component
-{
-  constructor(props)
-  {
-    super(props);
-    const data = new ListView.DataSource({rowHasChanged: (r1, r2) => r1 != r2});
-    this.state =
-    {
-      dataSource: data.cloneWithRows
-      (
-        [
-          "John", "Joel", "James", "Jimmy", 'Jackson', 'Jillian', 'Julie', 'Devin',
-          "John", "Joel", "James", "Jimmy", 'Jackson', 'Jillian', 'Julie', 'Devin',
-          "John", "Joel", "James", "Jimmy", 'Jackson', 'Jillian', 'Julie', 'Devin',
-          "John", "Joel", "James", "Jimmy", 'Jackson', 'Jillian', 'Julie', 'Devin'
-        ]
-      )
-    }
-  }
+var BasicConfig = Navigator.SceneConfigs.FloatFromLeft;
 
-  render()
-  {
-    return(
-      <View style = {{paddingTop: 30}}>
-        <ListView
-          dataSource={this.state.dataSource}
-          renderRow={(rowData) => <Text>{rowData}</Text>}
-        />
-      </View>
-    );
+class NavigationApp extends Component{
+  render(){
+      return(
+          <Navigator
+              initialRoute = {{ title: "Start Screen", index: 0 }}
+              configureScene = { (route, routeStack) => Object.assign( {}, BasicConfig, {
+                springTension: 140,
+                springFriction: 1,
+              } ) }
+              renderScene = {(route, navigator) => 
+                  <MyScene 
+                    title = {route.title}
+
+                    // Function to call when a new scene should be displayed
+                    onForward = { () => {
+                      const nextIndex = route.index + 1;
+                      navigator.push({
+                        title: 'Scene ' + nextIndex,
+                        index: nextIndex,
+                      });
+                    }}
+
+                    // Function to call to go back to the previous scene
+                    onBack = { () => {
+                      if (route.index > 0) {
+                        navigator.pop();
+                      }
+                    }}
+                  />
+              }
+          />
+      )
   }
 }
+
+AppRegistry.registerComponent('Akari', () => NavigationApp); // launcher component
 
 /********************************************************************************
  * End of App
  *******************************************************************************/
-AppRegistry.registerComponent('Akari', () => ListViewBasics); // launcher component
