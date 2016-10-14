@@ -13,13 +13,13 @@ export default class MyScene extends Component
     {
         return(
             <View style = { styles.defaultBackground }>
-                <Text style = { styles.bigBold } >Current Scene: { this.props.title }</Text>
+                <Text style = { [styles.bigBold, {color: 'white'}] } >Current Scene: { this.props.title }</Text>
 
-                <TouchableHighlight onPress = { this.props.onForward } underlayColor='transparent'>
+                <TouchableHighlight style = {styles.button} onPress = { this.props.onForward } underlayColor='pink'>
                     <Text style = { styles.bigBold } >Tap me to go forward</Text>
                 </TouchableHighlight>
                 
-                <TouchableHighlight onPress = { this.props.onBack } underlayColor='transparent'>
+                <TouchableHighlight style = {styles.button} onPress = { this.props.onBack } underlayColor='pink'>
                     <Text style = { styles.bigBold } >Tap me to go back</Text>
                 </TouchableHighlight>
             </View>
@@ -31,13 +31,22 @@ export default class MyScene extends Component
 const styles = StyleSheet.create({
     defaultBackground: {
         flex: 1,
-        backgroundColor: "#006699"
+        backgroundColor: "#006699",
+        alignItems: 'center',
     },
 
     bigBold: {
-        color: "#EEEEEE",
+        color: "#444444",
         fontWeight: 'bold',
         fontSize: 20,
-        padding: 20,
     },
+
+    button: {
+        backgroundColor: "pink",
+        width: 300,
+        margin: 20,
+        alignItems: 'center',
+        paddingVertical: 10,
+        borderRadius: 5
+    }
 });
